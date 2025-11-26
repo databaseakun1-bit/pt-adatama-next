@@ -1,0 +1,865 @@
+/* ---------- FONT IMPORT ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+@font-face {
+  font-family: 'MedievalSharp-Regular';
+  src: url('/font/MedievalSharp-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Centaur';
+  src: url('/font/Centaur.ttf');
+}
+
+@font-face {
+  font-family: 'Clarendon-BT';
+  src: url('/font/ClarendonBTRoman.ttf');
+}
+
+@font-face {
+  font-family: 'Seasons';
+  src: url('/font/Fontspring-DEMO-theseasons-reg.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Phenomena-Thin';
+  src: url('/font/Phenomena-Thin.ttf')
+}
+
+:root {
+  --green: #009B4C;
+  --dark: #252222;
+  --text: #000;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+}
+/* ---------- HEADER ---------- */
+.floating-header {
+  position: fixed;
+  top: 22px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  z-index: 9999;
+  position: relative;
+}
+
+.logo {
+  height: 45px;
+}
+
+.brand-box {
+  background: var(--green);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-family: 'MedievalSharp-Regular';
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 9999; /* PAKSA selalu di atas */
+}
+
+.brand-link * {
+  pointer-events: none; /* Biar klik 100% ke anchor */
+}
+
+
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-card {
+  background: rgba(255,255,255,0.88);
+  padding: 8px 42px;
+  border-radius: 16px;
+  display: flex;
+  gap: 40px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.menu-card a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 18px;
+  font-family: 'Centaur';
+}
+
+.header-right .buy-btn {
+  background: var(--green);
+  padding: 12px 30px;
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 18px;
+  text-decoration: none;
+  font-family: 'Clarendon-BT';
+  box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+}
+/* ---------- HERO SECTION ---------- */
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* background via pseudo element */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: heroSlide 60s infinite ease-in-out;
+  z-index: 0;
+}
+
+/* dark overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 34, 34, 0.6);
+  z-index: 1;
+}
+
+/* hero text */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  font-family: 'Seasons';
+}
+
+.hero-welcome {
+  font-size: 56px;
+  color: #ffffff;
+  font-weight: normal;
+}
+
+.hero-adatama {
+  font-size: 90px;
+  color: #F0E108;
+  font-family: 'MedievalSharp-Regular';
+  font-weight: normal;
+}
+
+.hero-subtitle {
+  font-size: 42px;
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+.hero-subtitle .hero-pt {
+  color: #F0E108;
+}
+
+.hero-subtitle .hero-name {
+  color: #fff;
+}
+
+/* background animation */
+@keyframes heroSlide {
+  0%   { background-image: url('/images/cengkeh-herosection.jpg'); }
+  25%  { background-image: url('/images/vanilla-herosection.jpg'); }
+  50%  { background-image: url('/images/blackpepper-herosection.jpg'); }
+  75%  { background-image: url('/images/giantginger-herosection.jpg'); }
+  100% { background-image: url('/images/cengkeh-herosection.jpg'); }
+}
+/* ---------- ABOUT ---------- */
+.about-section {
+  padding: 100px 20px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  max-width: 900px;
+  text-align: center;
+}
+
+.about-title {
+  font-family: 'Centaur', serif;
+  font-size: 38px;
+  margin-bottom: 10px;
+  color: #1f1f1f;
+}
+
+.about-subtitle {
+  font-family: 'MedievalSharp-Regular', serif;
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #009B4C;
+}
+
+.about-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  max-width: 750px;
+  margin: 0 auto 50px auto;
+}
+
+.about-values {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.value-box {
+  background: #f6f6f6;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.value-box h4 {
+  font-family: 'Centaur', serif;
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.value-box p {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #555;
+}
+
+/* PRODUCT GALLERY SECTION */
+.product-gallery {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.gallery-title {
+  font-family: 'Centaur', serif;
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.product-box {
+  width: 100%;
+  height: 260px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+.product-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.product-label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0,0,0,0.55);
+  color: white;
+  font-family: 'Centaur', serif;
+  font-size: 18px;
+}
+
+/* ---------------- GET IN TOUCH SECTION (CLEAN VERSION) ---------------- */
+
+.getintouch-section {
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+  background-image: url('/images/cengkeh-getintouch.jpg'); 
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.getintouch-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(1px);
+  z-index: 1;
+}
+
+.getintouch-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Title */
+.getintouch-content h2 {
+  font-size: 26px;
+  font-family: 'Seasons';
+  margin-bottom: 16px;
+}
+
+/* INFO BOX WRAPPER */
+.contact-info-box {
+  font-family: 'Phenomena-Thin';
+  line-height: 1.5;
+  font-size: 20px;
+  max-width: 500px;
+}
+
+.company-name {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* Contact item */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.icon {
+  font-size: 16px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background: #13482d;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Centaur', serif;
+  padding: 6px 0;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 700px;   /* >>> ini bikin box jadi kecil di tengah <<< */
+  margin: 0 auto;
+  padding: 0 16px;    /* biar tidak mentok sisi kiri/kanan */
+}
+
+.footer p {
+  margin: 4px 0;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* ------------------- CONTACT SECTION ------------------- */
+
+.contact-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/images/contact-bg.jpg'); /* opsional */
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 30, 30, 0.55);
+  z-index: 1;
+}
+
+.contact-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 48px;
+  font-family: 'Fontspring-DEMO-theseasons-reg';
+  color: #F0E108;
+}
+
+.contact-subtitle {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #f5f5f5;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-info-box {
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 14px;
+  backdrop-filter: blur(4px);
+  text-align: left;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.contact-form button {
+  padding: 14px;
+  background: #009B4C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #007a3a;
+}
+/* ---------------- CONTACT PAGE (FULL PAGE) ---------------- */
+
+.contactpage-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 40px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/images/contact-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.contactpage-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 30, 30, 0.55);
+  z-index: 1;
+}
+
+.contactpage-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.contactpage-title {
+  font-size: 48px;
+  font-family: 'Seasons';
+  color: #F0E108;
+  margin-bottom: 10px;
+}
+
+.contactpage-subtitle {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #f5f5f5;
+}
+
+/* GRID */
+.contactpage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* LEFT BOX */
+.contactpage-info-box {
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 14px;
+  backdrop-filter: blur(4px);
+  text-align: left;
+}
+
+/* RIGHT FORM */
+.contactpage-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contactpage-form input,
+.contactpage-form textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.contactpage-btn {
+  padding: 14px;
+  background: #009B4C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.contactpage-btn:hover {
+  background: #007a3a;
+}
+
+/* ========== PRODUCT PAGE ========== */
+
+/* HERO KECIL */
+.product-hero {
+  text-align: center;
+  padding: 120px 20px 60px;
+  background: #f7f7f7;
+}
+
+.product-hero-title {
+  font-family: 'Centaur', serif;
+  font-size: 46px;
+  margin: 0;
+}
+
+.product-hero-subtitle {
+  font-family: 'Centaur', serif;
+  font-size: 20px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* GRID PRODUK */
+.product-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.16);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-family: 'Centaur', serif;
+  font-size: 22px;
+  margin: 16px 0 8px;
+}
+
+.product-card p {
+  padding: 0 16px;
+  color: #444;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+}
+
+.product-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 26px;
+  background: #009B4C;
+  color: white;
+  border-radius: 8px;
+  font-family: 'Clarendon BT Roman', serif;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.22);
+}
+
+/* PRODUCT DETAIL PAGE */
+
+.detail-hero {
+  text-align: center;
+  padding: 140px 20px 60px;
+  background: #f3f3f3;
+}
+
+.detail-hero h1 {
+  font-family: 'Centaur', serif;
+  font-size: 46px;
+  margin: 0;
+}
+
+.detail-hero p {
+  font-family: 'Inter', sans-serif;
+  color: #444;
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+/* CONTAINER */
+.detail-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* IMAGE */
+.detail-image img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* TEXT BLOCK */
+.detail-info h2 {
+  font-family: 'Centaur', serif;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.detail-info p {
+  font-family: 'Inter', sans-serif;
+  color: #444;
+  line-height: 1.6;
+}
+
+.detail-info h3 {
+  font-family: 'Centaur', serif;
+  margin-top: 24px;
+}
+
+/* TABLE */
+.detail-table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.detail-table td {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Inter', sans-serif;
+}
+
+/* BUTTON */
+.detail-btn {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 12px 32px;
+  background: #009B4C;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: 'Clarendon BT Roman', serif;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .floating-header {
+    padding: 0 20px;
+    top: 12px;
+  }
+
+  .menu-card {
+    gap: 20px;
+    padding: 6px 20px;
+  }
+
+  .menu-card a {
+    font-size: 15px;
+  }
+
+  .header-right .buy-btn {
+    display: none; /* biar header tidak sesak */
+  }
+
+  /* HERO */
+  .hero-welcome {
+    font-size: 32px;
+  }
+
+  .hero-adatama {
+    font-size: 54px;
+  }
+
+  .hero-subtitle {
+    font-size: 26px;
+  }
+
+  /* ABOUT */
+  .about-section {
+    padding: 60px 20px;
+  }
+
+  .about-values {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .value-box {
+    width: 90%;
+  }
+
+  /* PRODUCT GALLERY */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-box {
+    height: 200px;
+  }
+
+  /* GET IN TOUCH */
+  .getintouch-content {
+    padding: 60px 20px;
+  }
+
+  .contact-info-box {
+    font-size: 16px;
+  }
+
+  /* CONTACT PAGE */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-container {
+    padding: 0 10px;
+  }
+
+  .contact-title {
+    font-size: 32px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  /* PRODUCT LIST PAGE */
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* PRODUCT DETAIL PAGE */
+  .detail-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .detail-image img {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .detail-info h2 {
+    text-align: center;
+  }
+
+  .detail-table td {
+    font-size: 14px;
+  }
+}
+
+/* ========== EXTRA SMALL PHONES (MAX 480px) ========== */
+@media (max-width: 480px) {
+
+  .hero-welcome {
+    font-size: 26px;
+  }
+
+  .hero-adatama {
+    font-size: 40px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+
+  .header-left .brand-box {
+    font-size: 14px;
+    padding: 4px 10px;
+  }
+}
