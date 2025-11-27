@@ -6,9 +6,11 @@ import ContactForm from "../components/ContactForm";
 export default function Contact() {
   return (
     <>
-      <Head>
-        <title>Contact Us — PT Adatama</title>
-      </Head>
+         <Head>
+         <title>Contact Us</title>
+         <link rel="icon" href="/favicon.ico" sizes="any" />
+         <link rel="icon" type="image/png" href="/favicon.png" />
+         </Head>
 
       <Header />
 
