@@ -1,37 +1,33 @@
 export default function About() {
   return (
     <section id="about" className="about-section">
-
       <div className="about-container">
         <h2 className="about-title">About Us</h2>
         <h3 className="about-subtitle">ADATAMA</h3>
 
         <p className="about-text">
-          Adatama adalah perusahaan ekspor hasil alam Indonesia yang berfokus 
-          pada rempah dan komoditas berkualitas tinggi. Kami berdiri dengan 
-          komitmen untuk menghadirkan produk terbaik dari petani lokal kepada 
-          pasar internasional melalui proses seleksi, pengolahan, dan pengiriman 
-          yang profesional.
+          Adatama is an Indonesian exporter of natural products, focused on high-quality spices and
+          commodities. We are committed to bringing the best products from local farmers to
+          international markets through professional selection, processing and shipping.
         </p>
 
         <div className="about-values">
           <div className="value-box">
             <h4>Quality Sourcing</h4>
-            <p>Seleksi bahan baku terbaik, langsung dari petani.</p>
+            <p>The best raw materials, sourced directly from farmers.</p>
           </div>
 
           <div className="value-box">
             <h4>Sustainable Partnership</h4>
-            <p>Berkolaborasi jangka panjang dengan pelaku lokal.</p>
+            <p>Long-term collaboration with local growers.</p>
           </div>
 
           <div className="value-box">
             <h4>Indonesian Origin</h4>
-            <p>Fokus pada rempah dan komoditas asli Nusantara.</p>
+            <p>Focused on authentic spices and commodities from the Indonesian archipelago.</p>
           </div>
         </div>
       </div>
-
     </section>
   );
 }
