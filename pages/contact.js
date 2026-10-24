@@ -3,13 +3,16 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ContactForm from "../components/ContactForm";
 import { SITE, whatsappLink } from "../data/site";
+import { useT } from "../lib/i18n";
 
 export default function Contact() {
+  const { t } = useT();
+
   return (
     <>
       <Seo
-        title="Contact Us"
-        description="Request an offer for Indonesian cloves, vanilla, black pepper or giant ginger. Contact PT. Andalan Nature Utama (Adatama)."
+        title={t.seo.contactTitle}
+        description={t.seo.contactDescription}
         path="/contact"
       />
 
@@ -21,41 +24,39 @@ export default function Contact() {
 
           <div className="contact-container">
             <div className="contact-card">
-              {/* Left: info */}
+              {/* Info side */}
               <div className="contact-info-side">
-                <h1 className="contact-main-title">Start a Global Partnership</h1>
-                <p className="contact-description">
-                  Interested in our premium spices? Our team is ready to answer your questions within 24 hours.
-                </p>
+                <h1 className="contact-main-title">{t.contactPage.title}</h1>
+                <p className="contact-description">{t.contactPage.intro}</p>
 
                 <div className="contact-details">
                   <div className="detail-item">
                     <span className="detail-icon" aria-hidden="true">📧</span>
-                    <p><a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+                    <p><a dir="ltr" href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
                   </div>
                   <div className="detail-item">
                     <span className="detail-icon" aria-hidden="true">📞</span>
-                    <p><a href={`tel:${SITE.phoneRaw}`}>{SITE.phone}</a></p>
+                    <p><a dir="ltr" href={`tel:${SITE.phoneRaw}`}>{SITE.phone}</a></p>
                   </div>
                   <div className="detail-item">
                     <span className="detail-icon" aria-hidden="true">📍</span>
-                    <p>{SITE.location}</p>
+                    <p>{t.site.location}</p>
                   </div>
                 </div>
 
                 <a
                   className="wa-btn"
-                  href={whatsappLink("Hello Adatama, I would like to ask about your products.")}
+                  href={whatsappLink(t.contactPage.whatsappMessage)}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Chat on WhatsApp
+                  {t.contactPage.whatsapp}
                 </a>
               </div>
 
-              {/* Right: form */}
+              {/* Form side */}
               <div className="contact-form-side">
-                <h3 className="form-heading">Send Us a Message</h3>
+                <h3 className="form-heading">{t.contactPage.formHeading}</h3>
                 <ContactForm />
               </div>
             </div>

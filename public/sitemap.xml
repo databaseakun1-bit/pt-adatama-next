@@ -1,10 +1,227 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://pt-adatama-next.vercel.app/</loc></url>
-  <url><loc>https://pt-adatama-next.vercel.app/products</loc></url>
-  <url><loc>https://pt-adatama-next.vercel.app/products/clove</loc></url>
-  <url><loc>https://pt-adatama-next.vercel.app/products/vanilla</loc></url>
-  <url><loc>https://pt-adatama-next.vercel.app/products/blackpepper</loc></url>
-  <url><loc>https://pt-adatama-next.vercel.app/products/giantginger</loc></url>
-  <url><loc>https://pt-adatama-next.vercel.app/contact</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/id</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/zh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/id/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/ar/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/zh/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/products/clove</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products/clove"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products/clove"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products/clove"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products/clove"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products/clove"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/id/products/clove</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products/clove"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products/clove"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products/clove"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products/clove"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products/clove"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/ar/products/clove</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products/clove"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products/clove"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products/clove"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products/clove"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products/clove"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/zh/products/clove</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products/clove"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products/clove"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products/clove"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products/clove"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products/clove"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/products/vanilla</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products/vanilla"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products/vanilla"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products/vanilla"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products/vanilla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products/vanilla"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/id/products/vanilla</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products/vanilla"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products/vanilla"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products/vanilla"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products/vanilla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products/vanilla"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/ar/products/vanilla</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products/vanilla"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products/vanilla"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products/vanilla"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products/vanilla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products/vanilla"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/zh/products/vanilla</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products/vanilla"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products/vanilla"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products/vanilla"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products/vanilla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products/vanilla"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/products/blackpepper</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products/blackpepper"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products/blackpepper"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products/blackpepper"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products/blackpepper"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products/blackpepper"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/id/products/blackpepper</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products/blackpepper"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products/blackpepper"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products/blackpepper"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products/blackpepper"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products/blackpepper"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/ar/products/blackpepper</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products/blackpepper"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products/blackpepper"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products/blackpepper"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products/blackpepper"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products/blackpepper"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/zh/products/blackpepper</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products/blackpepper"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products/blackpepper"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products/blackpepper"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products/blackpepper"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products/blackpepper"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/products/giantginger</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products/giantginger"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products/giantginger"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products/giantginger"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products/giantginger"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products/giantginger"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/id/products/giantginger</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products/giantginger"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products/giantginger"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products/giantginger"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products/giantginger"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products/giantginger"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/ar/products/giantginger</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products/giantginger"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products/giantginger"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products/giantginger"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products/giantginger"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products/giantginger"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/zh/products/giantginger</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/products/giantginger"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/products/giantginger"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/products/giantginger"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/products/giantginger"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/products/giantginger"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/contact"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/contact"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/contact"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/id/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/contact"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/contact"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/contact"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/ar/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/contact"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/contact"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/contact"/>
+  </url>
+  <url>
+    <loc>https://pt-adatama-next.vercel.app/zh/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pt-adatama-next.vercel.app/contact"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://pt-adatama-next.vercel.app/id/contact"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://pt-adatama-next.vercel.app/ar/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://pt-adatama-next.vercel.app/zh/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pt-adatama-next.vercel.app/contact"/>
+  </url>
 </urlset>

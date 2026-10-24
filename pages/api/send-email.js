@@ -29,6 +29,7 @@ export default async function handler(req, res) {
   const email = line(body.email, 150);
   const country = line(body.country, 80);
   const product = line(body.product, 80);
+  const lang = line(body.locale, 5); // language the visitor used on the website
   const message = text(body.message, 3000);
 
   if (!name || !message || !EMAIL_RE.test(email)) {
@@ -60,7 +61,7 @@ export default async function handler(req, res) {
       text:
         `New inquiry from the Adatama website\n\n` +
         `Name: ${name}\nCompany: ${company || "-"}\nEmail: ${email}\n` +
-        `Country: ${country || "-"}\nProduct: ${product || "General inquiry"}\n\n${message}`,
+        `Country: ${country || "-"}\nProduct: ${product || "General inquiry"}\nWebsite language: ${lang || "-"}\n\n${message}`,
       html: `
         <h3>New inquiry from a potential buyer</h3>
         <p><strong>Name:</strong> ${esc(name)}</p>
@@ -68,6 +69,7 @@ export default async function handler(req, res) {
         <p><strong>Email:</strong> ${esc(email)}</p>
         <p><strong>Country:</strong> ${esc(country || "-")}</p>
         <p><strong>Product:</strong> ${esc(product || "General inquiry")}</p>
+        <p><strong>Website language:</strong> ${esc(lang || "-")}</p>
         <p><strong>Message:</strong></p>
         <p style="white-space: pre-line;">${esc(message)}</p>
       `,

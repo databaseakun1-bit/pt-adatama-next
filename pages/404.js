@@ -2,17 +2,20 @@ import Link from "next/link";
 import Seo from "../components/Seo";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useT } from "../lib/i18n";
 
 export default function NotFound() {
+  const { t } = useT();
+
   return (
     <>
-      <Seo title="Page Not Found" path="/404" />
+      <Seo title={t.seo.notFoundTitle} path="/404" noindex />
       <Header />
       <main className="notfound">
         <h1>404</h1>
-        <p>Sorry, we could not find the page you are looking for.</p>
+        <p>{t.notFound.text}</p>
         <Link href="/" className="detail-btn">
-          Back to Home
+          {t.notFound.back}
         </Link>
       </main>
       <Footer />

@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { SITE } from "../data/site";
+import { useT } from "../lib/i18n";
 
 export default function Hero() {
+  const { t } = useT();
+
   return (
     <section className="hero-section" id="home">
       {/* Transparent overlay */}
@@ -9,18 +11,18 @@ export default function Hero() {
 
       {/* Hero content */}
       <div className="hero-content">
-        <h2 className="hero-welcome">Welcome to</h2>
+        <h2 className="hero-welcome">{t.hero.welcome}</h2>
         <h1 className="hero-adatama">ADATAMA</h1>
         <h3 className="hero-subtitle">
           <span className="hero-pt">PT.</span> <span className="hero-name">Andalan Nature Utama</span>
         </h3>
-        <p className="hero-tagline">{SITE.tagline}</p>
+        <p className="hero-tagline">{t.hero.tagline}</p>
         <div className="hero-actions">
           <Link href="/products" className="hero-btn">
-            View Products
+            {t.hero.viewProducts}
           </Link>
           <Link href="/contact" className="hero-btn secondary">
-            Request a Quote
+            {t.hero.requestQuote}
           </Link>
         </div>
       </div>

@@ -2,11 +2,16 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { PRODUCTS } from "../data/products";
 import { SITE } from "../data/site";
+import { getDict, useT } from "../lib/i18n";
 
 const EMPTY = { name: "", company: "", email: "", country: "", product: "", message: "", website: "" };
 
+// The email you receive is always in English, so the product value is the English name.
+const englishName = (slug) => getDict("en").products[slug].name;
+
 export default function ContactForm() {
   const router = useRouter();
+  const { t, locale } = useT();
   const [form, setForm] = useState(EMPTY);
   const [status, setStatus] = useState({ state: "idle", message: "" });
 
@@ -15,8 +20,7 @@ export default function ContactForm() {
     if (!router.isReady) return;
     const slug = router.query.product;
     if (typeof slug !== "string") return;
-    const match = PRODUCTS.find((p) => p.slug === slug);
-    if (match) setForm((f) => ({ ...f, product: match.name }));
+    if (PRODUCTS.some((p) => p.slug === slug)) setForm((f) => ({ ...f, product: englishName(slug) }));
   }, [router.isReady, router.query.product]);
 
   const onChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
@@ -30,26 +34,20 @@ export default function ContactForm() {
       const res = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, locale }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.success) throw new Error(data.message || "Request failed");
 
-      setStatus({
-        state: "success",
-        message: "Thank you! Your message has been sent. We will reply within 24 hours.",
-      });
+      setStatus({ state: "success", message: t.form.success });
       setForm(EMPTY);
     } catch (err) {
-      setStatus({
-        state: "error",
-        message: `Sorry, we could not send your message. Please email us at ${SITE.email} or message us on WhatsApp.`,
-      });
+      setStatus({ state: "error", message: t.form.error.replace("{email}", SITE.email) });
     }
   }
 
   return (
-    <form className="modern-form" onSubmit={onSubmit} noValidate={false}>
+    <form className="modern-form" onSubmit={onSubmit}>
       {status.state === "success" && (
         <div className="form-status success" role="status">{status.message}</div>
       )}
@@ -59,45 +57,44 @@ export default function ContactForm() {
 
       <div className="form-row">
         <div className="input-group">
-          <label htmlFor="cf-name">Full Name *</label>
+          <label htmlFor="cf-name">{t.form.name}</label>
           <input id="cf-name" type="text" name="name" value={form.name} onChange={onChange}
-                 placeholder="Your name" required maxLength={100} autoComplete="name" />
+                 placeholder={t.form.namePh} required maxLength={100} autoComplete="name" />
         </div>
         <div className="input-group">
-          <label htmlFor="cf-company">Company</label>
+          <label htmlFor="cf-company">{t.form.company}</label>
           <input id="cf-company" type="text" name="company" value={form.company} onChange={onChange}
-                 placeholder="Your company" maxLength={120} autoComplete="organization" />
+                 placeholder={t.form.companyPh} maxLength={120} autoComplete="organization" />
         </div>
       </div>
 
       <div className="form-row">
         <div className="input-group">
-          <label htmlFor="cf-email">Business Email *</label>
-          <input id="cf-email" type="email" name="email" value={form.email} onChange={onChange}
-                 placeholder="name@company.com" required maxLength={150} autoComplete="email" />
+          <label htmlFor="cf-email">{t.form.email}</label>
+          <input id="cf-email" type="email" name="email" dir="ltr" value={form.email} onChange={onChange}
+                 placeholder={t.form.emailPh} required maxLength={150} autoComplete="email" />
         </div>
         <div className="input-group">
-          <label htmlFor="cf-country">Country</label>
+          <label htmlFor="cf-country">{t.form.country}</label>
           <input id="cf-country" type="text" name="country" value={form.country} onChange={onChange}
-                 placeholder="Destination country" maxLength={80} autoComplete="country-name" />
+                 placeholder={t.form.countryPh} maxLength={80} autoComplete="country-name" />
         </div>
       </div>
 
       <div className="input-group">
-        <label htmlFor="cf-product">Product of Interest</label>
+        <label htmlFor="cf-product">{t.form.product}</label>
         <select id="cf-product" name="product" value={form.product} onChange={onChange}>
-          <option value="">General inquiry</option>
+          <option value="">{t.form.general}</option>
           {PRODUCTS.map((p) => (
-            <option key={p.slug} value={p.name}>{p.name}</option>
+            <option key={p.slug} value={englishName(p.slug)}>{t.products[p.slug].name}</option>
           ))}
         </select>
       </div>
 
       <div className="input-group">
-        <label htmlFor="cf-message">Message *</label>
+        <label htmlFor="cf-message">{t.form.message}</label>
         <textarea id="cf-message" name="message" value={form.message} onChange={onChange}
-                  placeholder="Quantity, packaging, destination port, target price..."
-                  rows="5" required maxLength={3000} />
+                  placeholder={t.form.messagePh} rows="5" required maxLength={3000} />
       </div>
 
       {/* Honeypot: hidden from humans, bots fill it in */}
@@ -107,7 +104,7 @@ export default function ContactForm() {
       </div>
 
       <button type="submit" className="submit-btn-modern" disabled={status.state === "sending"}>
-        {status.state === "sending" ? "Sending..." : "Send Message"}
+        {status.state === "sending" ? t.form.sending : t.form.send}
       </button>
     </form>
   );

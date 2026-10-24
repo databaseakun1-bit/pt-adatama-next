@@ -1,12 +1,15 @@
 import Link from "next/link";
+import { useT } from "../lib/i18n";
 
 export default function CtaBand() {
+  const { t } = useT();
+
   return (
     <section className="cta-band">
-      <h2>Looking to source Indonesian spices?</h2>
-      <p>Tell us what you need, and our team will get back to you within 24 hours.</p>
+      <h2>{t.cta.title}</h2>
+      <p>{t.cta.text}</p>
       <Link href="/contact" className="hero-btn">
-        Request a Quote
+        {t.cta.button}
       </Link>
     </section>
   );
