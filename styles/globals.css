@@ -1139,3 +1139,51 @@ textarea:focus-visible {
   .detail-actions { justify-content: center; }
   .contact-info-side .wa-btn { align-self: stretch; text-align: center; }
 }
+
+/* ===== FIX: CONTACT PAGE DI HP ===== */
+.contact-card > * {
+  min-width: 0;
+}
+
+.contact-details .detail-item p {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.detail-icon {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .contact-hero-section {
+    padding: 100px 16px 60px;
+  }
+
+  .contact-card {
+    grid-template-columns: minmax(0, 1fr);
+    border-radius: 18px;
+  }
+
+  .contact-info-side,
+  .contact-form-side {
+    padding: 32px 20px;
+  }
+
+  .contact-main-title {
+    font-size: 28px;
+  }
+
+  .contact-details .detail-item {
+    gap: 12px;
+  }
+
+  .wa-btn {
+    align-self: stretch;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .form-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
